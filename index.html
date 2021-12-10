@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Dashboards strategy</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Official statistics in DfE" />
+    <script src="index_files/header-attrs-2.11/header-attrs.js"></script>
+    <link href="index_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="index_files/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Dashboards strategy
+### Official statistics in DfE
+### 2021/12/15
+
+---
+
+  
+
+
+
+
+# When to use a dashboard
+
+--
+
+The primary route for publishing official statistics is via [Explore Education Statistics](https://explore-education-statistics.service.gov.uk/) (EES). 
+
+--
+
+Dashboards can be to used to compliment official statistics that are already published.
+
+--
+
+This may be to do a deeper piece of analysis for a specific user group, or to make use of functionality that isn’t available within the platform.
+
+--
+
+It is important that all dashboards should have a clear use case and reasoning for why they are required.
+
+---
+
+layout: true
+
+# Things to consider
+
+---
+
+--
+
+All dashboards should have a clear use case and reasoning for why they are required. 
+
+--
+
+They also need to meet the [latest accessibility regulations](https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag) for public sector services.
+
+--
+
+Dashboards, along with the Official Statistics that they supplement, are a digital service that we provide, and we should ensure we follow the [Service Standard](https://www.gov.uk/service-manual/service-standard). The standard covers a number of aspects that all producers should be considering when developing a dashboard, and strongly influence the guidance on this page.
+
+--
+
+All data must be published on EES as open CSV files so that it is accessible in one place and we are not publishing anything new via dashboards.
+
+--
+
+When published, dashboards can be directed to from existing EES releases using the related links at the top right of a release page, or by being included as a url anywhere in the release content.
+
+---
+
+layout: true
+
+# User needs
+
+---
+
+--
+
+When designing a government service, always start by learning about the people who will use it. If you do not understand who they are or what they need from your service, you cannot build the right thing.
+
+--
+
+Understanding as much of the context as possible gives you the best chance of meeting users’ needs in a simple and cost effective way.
+
+--
+
+The real problem might not be the one you originally thought needed solving. Testing your assumptions early and often reduces the risk of building the wrong thing.
+
+--
+
+Services designed around users and their needs:
+
+--
+
+- are more likely to be used
+
+--
+
+- help more people get the right outcome for them - and so achieve their policy intent
+
+--
+
+- cost less to operate by reducing time and money spent on resolving problems
+
+--
+
+See the [service manual](https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs) for more information on learning about your users and their needs.
+
+---
+
+layout: true
+
+# Tools / software
+
+---
+
+--
+
+When you make a decision about technology, you’re making a significant investment. 
+
+--
+
+The choices you make will have a huge impact on your ability to create, iterate and operate the service in a sustainable way. 
+
+--
+
+We should be choosing tools and technology that let us create a high quality service in a cost effective way and minimise the cost of changing direction in future.
+
+--
+
+The most common dashboard options available to us are:
+
+--
+
+- R Shiny
+
+--
+
+- Python Dash (or other Python-based alternatives)
+
+--
+
+- PowerBI
+
+---
+
+Some considerations to think about when choosing the tooling / software for a dashboard:
+
+--
+
+- will it be open source? (Service standards [12](https://www.gov.uk/service-manual/service-standard/point-12-make-new-source-code-open) and [13](https://www.gov.uk/service-manual/service-standard/point-13-use-common-standards-components-patterns))
+
+--
+
+- what skills do you team already have, or are already developing?
+
+--
+
+- can you reuse anything that someone else has already done?
+
+--
+
+- do you have flexibility in formatting and styling?
+
+--
+
+- does it give the flexibility required to meet accessibility requirements?
+
+--
+
+- what costs will it involve? (Consider learning and development time and courses as well as technology)
+
+--
+
+- will it allow you to develop automated testing and CI to QA our dashboards?
+
+--
+
+- does it align with the Cabinet Office call to move towards R and Python for analysis?
+
+---
+
+For statistics production teams we'd recommended R Shiny as the first tool to to consider.
+
+--
+
+We feel that it:
+
+--
+
+- best meets the service standards
+
+--
+
+- is a sustainable long term solution
+
+--
+
+- provides the flexibility to create what we want, how we want
+
+--
+
+- aligns with the departments RAP strategy for the use of R in in Official Statistics
+
+--
+
+- best takes advantage of transferable knowledge and shared resources to minimise the costs and maximise the shared benefits
+
+--
+
+While we recommend R Shiny, teams can use other tools, such as PowerBI or Python-based alternatives as long as you are confident in the decision you've made and can evidence that against [Service Standard 11. Choose the right tools and technology](https://www.gov.uk/service-manual/service-standard/point-11-choose-the-right-tools-and-technology).
+
+---
+
+layout: true
+
+# Accessibility
+
+---
+
+--
+
+Accessibility means more than putting things online. It means making your content and design clear and simple enough so that most people can use it without needing to adapt it, while supporting those who do need to adapt things.
+
+---
+
+The regulations from 2018 apply to all dashboards created for Official statistics. All dashboards should:
+
+--
+
+- have an [accessibility statement](https://www.gov.uk/guidance/make-your-website-or-app-accessible-and-publish-an-accessibility-statement#publish-your-accessibility-statement)
+
+--
+
+- follow the [guidance](#accessibility-testing) for testing against [WCAG 2.1 AA accessibility standard](https://www.gov.uk/service-manual/helping-people-to-use-your-service/understanding-wcag)
+
+--
+
+- use open data that is already available via EES
+
+--
+
+Analysts should familiarise themselves with the gov.uk guidance on [service accessibility](https://www.gov.uk/service-manual/helping-people-to-use-your-service/making-your-service-accessible-an-introduction#meeting-government-accessibility-requirements), and the guidance we have on our guidance website.
+
+
+---
+
+layout: true
+
+# Governance
+
+---
+
+--
+
+The standards for dashboards, and department strategy are maintained by the Central Statistics Standards Unit and governed by the Statistics Leadership Group, which is made up of all senior statisticians owning Official Statistics publications in the department.
+
+--
+
+All teams developing dashboards to accompany Official Statistics should contact the Statistics Development Team for advice on the level of approval required. There may be times when HoP approval is needed in addition to team/unit leader approval.
+
+--
+
+Regular reflection on how teams are doing and finding ways to improve is an important part of good governance. We recommend that Senior Statisticians (G6) responsible for dashboards ensure that they are regularly reviewed, covering:
+
+--
+
+- [testing and quality assurance](#testing)
+
+--
+
+- [accessibility](#accessibility)  
+
+--
+
+- [performance against user needs](#assessing-performance)
+
+--
+
+- overall coherence with central standards and strategy
+
+
+---
+
+layout: true
+
+# Other considerations
+
+---
+
+--
+
+Full strategy includes guidance on:
+
+--
+
+- Iterative development
+
+--
+
+- Assessing performance and getting feedback
+
+--
+
+- Code testing, continuous integration and QA (R Shiny)
+
+--
+
+- Peer review 
+
+--
+
+- Styling (R Shiny)
+
+---
+
+layout: true
+
+# Next steps
+
+---
+
+--
+
+Gather feedback and get agreement from SLG
+
+--
+
+Publish and share around statistics producers
+
+--
+
+Share more widely across the DfE and GSS
+
+--
+
+Continue developing the guidance around R Shiny, including a template app for teams to start from
+
+---
+
+layout: true
+class: center, middle
+
+# Any questions?
+
+---
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create();
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
