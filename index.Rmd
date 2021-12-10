@@ -320,6 +320,47 @@ Full strategy includes guidance on:
 
 - Styling (R Shiny)
 
+--
+
+- Template app to build from (R Shiny)
+
+---
+
+layout: true
+
+# Summary
+
+---
+
+--
+
+Dashboards can be used to supplement Official statistics on EES. They need to have:
+
+--
+
+- Data published in EES
+
+--
+
+- A clear use case
+
+--
+
+- Approval from G6, SDT and HoP (if applicable)
+
+--
+
+- An accessibility statement, meet accessibility guidelines
+
+--
+
+- Plan for testing, gathering feedback and iterative development
+
+--
+
+- Evidence / justification for choice of software
+
+
 ---
 
 layout: true
